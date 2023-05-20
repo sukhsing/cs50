@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tasks</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelector("#submit1").disabled = true;
+                document.querySelector('#task').onkeyup  = () => {
+                    if(document.querySelector('#task').value.length > 0){
+                        document.querySelector('#submit1').disabled = false;
+                    }
+                    else{
+                        document.querySelector('#submit1').disabled = true;
+                    }
+                    
+                }
+                document.querySelector('form').onsubmit = () => {
+                    // const task = document.querySelector('#task').value;
+
+                    const li = document.createElement('li');
+                    // li.innerHTML = task;
+                    li.innerHTML = document.querySelector('#task').value;
+                    document.querySelector('#tasks').append(li);
+                    
+                    document.querySelector('#task').value = '';
+                    document.querySelector("#submit1").disabled = true;  
+                    document.querySelector('#task').focus();              
+                    //stop form from submitting  
+                    return false;
+ 
+
+                }
+            })
+        </script>
+    </head>
+    
+    <body>
+        <h1>Add Tasks</h1>
+        <ul id="tasks">
+        </ul>
+        <form>
+            <input id="task" placeholder="New Task" type="text" autofocus>
+            <input id="submit1" type="submit">
+        </form>
+    </body>
+    
+    <footer>
+        <h4>All rights reserved @PunjTech</h4> 
+    </footer>
+</html>

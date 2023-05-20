@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Form</title>
+    </head>
+    <body>
+        <h3>Candiate Information</h3>
+        <form>
+            <div>
+                <input name="fullname" type="text" placeholder="Enter Full Name" autofocus>
+                <input name="password" type="password" placeholder="Password">
+                <input name="gender" type="radio" value="male">Male
+                <input name="gender" type="radio" value="female">Female
+                <input name="gender" type="radio" value="other">Other
+            </div>
+            <p></p>
+            <div>
+                <input name="email" type="text" inputmode="email" placeholder="Enter E-mail">
+                <input name="address" type="text" placeholder="Address">
+                <input name="city" type="text" placeholder="City">               
+                <input name="state" list="states" placeholder="State">
+                <datalist id="states">
+                    <option value="Alabama"></option>
+                    <option value="New York"></option>
+                    <option value="Washington"></option>
+                    <option value="New Jersey"></option>
+                    <option value="Connecticut"></option>
+                </datalist>
+                <input name="zipcode" type="text" inputmode="numeric" maxlength="5" placeholder="Zip-code">
+            </div>
+            <p></p>
+            <input type="submit">
+        </form>
+    </body>
+</html>
